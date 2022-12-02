@@ -7,7 +7,19 @@ const myStyle = {
 
 class Index extends React.Component {
   render() {
-    return <h1 style={myStyle}>See All The Pokemon!</h1>;
+    const { pokemon } = this.props;
+    return (
+      <div>
+        <h1 style={myStyle}>See All The Pokemon!</h1>
+        <ul>
+          {pokemon.map((pokemon, i) => {
+            return (
+              <li>{pokemon.name[0].toUpperCase() + pokemon.name.slice(1)}</li>
+            );
+          })}
+        </ul>
+      </div>
+    );
   }
 }
 

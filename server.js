@@ -12,7 +12,7 @@ app.set('view engine', 'jsx');
 app.engine('jsx', expressReactViews.createEngine());
 
 app.get('/pokemon', function (req, res) {
-  res.render('Index');
+  res.render('Index', { pokemon: pokemon });
 });
 
 app.listen(port, function () {
