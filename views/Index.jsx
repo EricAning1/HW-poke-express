@@ -12,7 +12,7 @@ class Index extends React.Component {
       <div>
         <h1 style={myStyle}>See All The Pokemon!</h1>
         <ul>
-          {pokemon.map((pokemon, i) => {
+          {pokemon.map((pokemon, x) => {
             return (
               <li>
                 <a href={`/pokemon/${x}`}>
